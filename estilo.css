@@ -1,10 +1,10 @@
 body {
-    background-color: blueviolet;
+    background-color: lightblue;
 }
 .contenedor {
     margin: auto;
     margin-top: 150px;
-    background-color: #a9a9a9;
+    background-color: white;
     max-width: 1300px;
     min-height: 500px;
 }
@@ -59,11 +59,14 @@ input {
     margin-left:470px ;
 }
 .clima {
-    background-color: darkgray;  
+    background-color: white;  
     display: inline;
-    font-size: 30px;
-    padding-right: 70px;
+    font-size: 35px;
+    padding-top: 35px;
+    
 }
 .divclima{
     margin-left: 330px;
+    width: 1600px;
 }
+

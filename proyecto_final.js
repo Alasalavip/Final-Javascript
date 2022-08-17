@@ -41,9 +41,9 @@ function aparecer2(){
     let prim = sessionStorage.getItem("monto");
     let seg = sessionStorage.getItem("cuota");
    let tercero = sessionStorage.getItem("tot");
-    sum.innerText = "El valor del prestamo solicitado es "
+    sum.innerText = "El valor del prestamo solicitado es: "
     va.innerText  = prim;
-    pay.innerText = "El numero de cuotas eleigido es  "
+    pay.innerText = "El numero de cuotas eleigido es :"
     cuo.innerText  = seg;
     tot.innerText = "El total a devolver es:";
     all.innerText  = tercero;
@@ -67,7 +67,7 @@ cantidad.addEventListener("change" , function(e){
     let v2 = JSON.stringify(cuotas);
     sessionStorage.setItem("cuota", v2);
     remover2();
-    aparecer2();
+    
     function calculo (arr){
         return arr.cuota == cuotas
     }
@@ -79,6 +79,7 @@ cantidad.addEventListener("change" , function(e){
     let numero = valor * interes;
     let v4 = JSON.stringify(numero);
     sessionStorage.setItem("tot", v4);
+    aparecer2();
 }
 else {
     Toastify({
@@ -106,8 +107,9 @@ fetch("https://api.openweathermap.org/data/2.5/weather?q=Mendoza&units=metric&ap
   let minima = document.getElementById("min");
   let maxima = document.getElementById("max");
   let humedad = document.getElementById("hum");
-   temperatura.append(data.main.temp);
-   minima.append(data.main.temp_min);
-   maxima.append(data.main.temp_max);
-   humedad.append(data.main.humidity);
+   temperatura.append(data.main.temp , "C°");
+   minima.append(data.main.temp_min, "C°");
+   maxima.append(data.main.temp_max, "C°");
+   humedad.append(data.main.humidity, "%");
+   
 })    
